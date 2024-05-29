@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blush and Bloom</title>
+    
+    <style>
+       
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: url('https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148907303.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: rgba(242, 147, 161, 0.9);
+            border-bottom: 2px solid rgb(231, 9, 168);
+        }
+
+        .logo {
+            font-family: 'Brush Script MT', cursive;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo div {
+            font-family: 'Brush Script MT', cursive;
+           
+            font-size: 24px;
+            color: black;
+            font-size: 30px;
+        }
+
+        nav {
+            
+            text-align: right;
+        }
+
+        .navbar {
+            list-style: none;
+        }
+
+        .navbar li {
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        .navbar li a {
+            text-decoration: none;
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 5px;
+            
+        }
+
+        .navbar li a:hover,
+        .navbar li a.active {
+            background-color: #ff1493;
+            color: #fff;
+        }
+
+        .hero {
+            position: relative;
+            text-align: center;
+            padding: 100px 20px;
+            margin: 50px;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .hero video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+           opacity: 5;  
+        }
+
+        .hero h1 {
+            font-size: 58px;
+            color: #ef0883;
+        }
+
+        .hero h2 {
+            font-family: cursive;
+            font-size: 24px;
+            color: #df2280;
+            font-weight: bolder;
+           
+            margin: 20px 0;
+        }
+
+        .btn {
+            background-color: #ff85c2;
+            color: white;
+            padding: 10px 20px;
+            border: 2px solid white;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .btn:hover {
+            background-color: #ff1493;
+        }
+
+        .about,
+        .products {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px 15px;
+            margin: 70px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .products .product-list {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 10px;
+        }
+
+        .product {
+            background: #fff;
+            padding: 5px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+            border: 2px solid #edaccf;
+            margin: 70px;
+            text-align: center;
+        }
+
+        .product img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-bottom: 10px;
+            border-radius: 50%;
+        }
+
+        .product h3 {
+            font-size: 18px;
+            color: #ff69b4;
+        }
+
+        .product:hover {
+            transform: scale(1.05);
+        }
+
+        .product .btn {
+            margin-top: 10px;
+            
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(255, 182, 193, 0.9);
+            border-top: 2px solid #fff;
+            margin-top: 20px;
+        }
+
+        .subhead {
+            text-decoration: underline;
+            font-size: 36px;
+            font-weight: bold;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: rgb(235, 25, 179);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <div>Blush And Bloom</div>
+        </div>
+        <nav>
+            <ul class="navbar">
+                <li><a href="#home"  class="active">Home</a></li>
+                <li><a href="#makeup">Makeup</a></li>
+                <li><a href="#skincare">Skin Care</a></li>
+                <li><a href="#accessories">Accessories</a></li>
+                <li><a href="#jewellery">Jewellery</a></li>
+                <li><a href="#about">About Us</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+   
+    <main>
+        <section id="home" class="hero">
+            <video src="videeeee.mp4" autoplay loop muted></video>
+            <h1 style="font-family: balmoral script;">BLUSH n BLOOM</h1>
+            <h2><i>"Where Beauty Meets Bloom"</i></h2>
+            <button class="btn" onclick="window.location.href='#makeup'">Shop Now</button>
+        </section>
+        
+        <section id="makeup" class="products">
+            <h2 class="subhead">MAKEUP</h2>
+            <div class="product-list">
+                <div class="product">
+                    <img src="makeup1.jpg" alt="BLUSH">
+                    <h3>BLUSH</h3>
+                    <h4>$10</h4>
+                    <button class="btn" onclick="addToCart('BLUSH', 2900)">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="makeup5.jpg" alt="TINT">
+                    <h3>TINT</h3>
+                    <h4>$12</h4>
+                    <button class="btn" onclick="addToCart('TINT', 4500)">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="makeup2.webp" alt="LIP GLOSS">
+                    <h3>LIP GLOSS</h3>
+                    <h4>$7</h4>
+                    <button class="btn" onclick="addToCart('LIP GLOSS', 2000)">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="skincare" class="products">
+            <h2 class="subhead">SKIN CARE</h2>
+            <div class="product-list">
+                <div class="product">
+                    <img src="skincare2.jpg" alt="GLOW TONER">
+                    <h3>GLOW TONER</h3>
+                    <h4>$13</h4>
+                    <button class="btn" onclick="addToCart('GLOW TONER', 3500)">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="moisturiser.jpg" alt="MOISTURIZER">
+                    <h3>MOISTURIZER</h3>
+                    <h4>$15</h4>
+                    <button class="btn" onclick="addToCart('MOISTURIZER', 5500)">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="skincare3.jpg" alt="LIP BALM">
+                    <h3>LIP BALM</h4>
+                    <h4>$4</h4>
+                    <button class="btn" onclick="addToCart('LIP BALM', 1500)">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="accessories" class="products">
+            <h2 class="subhead">ACCESSORIES</h2>
+            <div class="product-list">
+                <div class="product">
+                    <img src="accessories4.jpg" alt="MIRROR">
+                    <h3>VANITY MIRROR</h3>
+                    <h4>$5</h4>
+                    <button class="btn" onclick="addToCart('EYE LASHES', 800)">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="accessories2.jpg" alt="BEAUTY BLENDER">
+                    <h3>BEAUTY BLENDER</h4>
+                    <h4>$6</h4>
+                    <button class="btn" onclick="addToCart('BEAUTY BLENDER', 600)">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="accessories3.jpg" alt="MAKEUP BRUSHES">
+                    <h3>MAKEUP BRUSHES</h4>
+                    <h4>$10</h4>
+                    <button class="btn" onclick="addToCart('MAKEUP BRUSHES', 1200)">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="jewellery" class="products">
+            <h2 class="subhead">JEWELLERY</h2>
+            <div class="product-list">
+                <div class="product">
+                    <img src="jewelry1.jpg" alt="BUTTERFLY RING">
+                    <h3>BUTTERFLY RING</h3>
+                    <h4>$3</h4>
+                    <button class="btn" onclick="addToCart('BUTTERFLY RING', 800)">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="jewelry4.jpg" alt="PEARL BRACELET">
+                    <h3>PEARL BRACELET</h3>
+                    <h4>$5</h4>
+                    <button class="btn" onclick="addToCart('PEARL BRACELET', 900)">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="jewelry2.jpg" alt="PINK RING">
+                    <h3>PINK RING</h3>
+                    <h4>$5</h4>
+                    <button class="btn" onclick="addToCart('PINK RING', 1000)">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <div style="text-align: center; margin: 50px 0;">
+            <button class="btn" onclick="window.location.href='checkout.html'">Checkout</button>
+        </div>
+
+        <section id="about" class="about">
+            <h2>About Us</h2>
+            <p>Let's discover the recipe for your most beautiful self and celebrate what makes you, YOU</p>
+        </section>
+
+       
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Blush and Bloom. All rights reserved.</p>
+    </footer>
+
+    <script>
+        let cart = [];
+
+        function addToCart(productName, productPrice) {
+            const product = { name: productName, price: productPrice };
+            cart.push(product);
+            alert(productName + ' has been added to your cart.');
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+
+        // Initialize cart from localStorage if available
+        window.onload = function() {
+            const storedCart = localStorage.getItem('cart');
+            if (storedCart) {
+                cart = JSON.parse(storedCart);
+            }
+        }
+    </script>
+</body>
+
+</html>
